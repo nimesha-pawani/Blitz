@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto";
+ }
+
+ .fa-bell,
+ .fa-user-tie{
+     color: rgb(255, 255, 255);
+     position: relative;
+ }
+
+ .fa-file-invoice,
+ .fa-file-circle-plus,
+ .fa-right-from-bracket{
+     margin-left: 15px;
+     color: rgb(255, 255, 255);
+     position: relative;
+ }
+
+.logo img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+a.active{
+    border-bottom: 3px solid #F8C000;
+    transition: 0.5s;
+    background: #f8be0037;
+}
+
+span{
+    margin-left: 20px;
+    font-family: "Roboto";
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav{  
+   background: #022D66;
+   width: 100%;
+   float: right;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}   
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    padding: 0 15px;
+}
+
+nav ul li a{
+    color: #ffffff;
+    font-size: 20px;
+    padding: 6px 15px;
+}
+
+.sidebar{
+    position: fixed;
+    background: #022D66;
+    width: 350px;
+    height: 100%;
+    margin-top: 65px;
+}
+
+.sidebar center img{
+    height: 50px;
+    width: 50px;
+    margin-top: 300px;
+    margin-right: 190px;
+}
+
+.sidebar a{
+    display: block;
+    line-height: 50px;
+    margin-top: 1px;
+    transition: 0.5s;
+}
+
+.sidebar a:hover{
+    border-bottom: 3px solid #F8C000;
+}
+
+
+.sidebar center span{
+    margin-left: -10px;
+    margin-top: 300px;
+}
+
+.name1{
+    margin-left: 20px;
+    font-family: "Roboto";
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover{
+    border-bottom: 3px solid #F8C000;
+    transition: 0.5s;
+}
