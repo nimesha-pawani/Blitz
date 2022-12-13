@@ -8,13 +8,6 @@
     font-family: "Roboto";
  }
 
-body{
-    background-image: url(bg2.png);
-    background-position: 0% 10%;
-    background-repeat: no-repeat;
-    height: 200px;
-}
-
  .fa-bell,
  .fa-user-tie{
      color: rgb(255, 255, 255);
@@ -117,6 +110,80 @@ nav a:hover{
     transition: 0.5s;
 }
 
+center ul{
+   padding: 20px 20px;
+   margin-left: 160px; 
+}
+
+center ul li span a{
+    color: #022D66;
+    font-size: 14px;
+    border: 0;
+    display:block;
+    width: 200px;
+    padding: 15px 18px;
+    background: none;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: -70px;
+    border: 3px solid #0264A2;
+    align-self: center;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+center ul li span a:hover{
+    background-color: #f8be00ae;
+}
+
+center ul li {
+    line-height: 30px;
+    padding: 0 5px;
+    margin-left: 200px;
+    display: inline-block;
+}
+
+.icon ul li{
+    display: inline-block;
+}
+
+.fa-trash-can{
+    display: inline-block;
+    color: #e81a1a;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 15px;
+    
+}
+.fa-pen-to-square{
+    display: inline-block;
+    color: #58e81a;
+    position: relative;
+    margin-left: -70px;
+}
+
+.button a{
+    color: #022D66;
+    border: 0;
+    background: #f8be00af;
+    display:inline-block;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1100px;
+    border: none;
+    padding: 15px 40px;
+    font-size: 15px;
+    align-self: center;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.button a:hover{
+    background-color:#F8C000;
+}
+
 
 #btn {
     color: #ffffff;
@@ -136,51 +203,16 @@ nav a:hover{
  }
  
  #btn:hover{
-     background-color: #feffff4a;
+     background-color: #feffff61;
  }
 
  .logout a:hover{
     border-bottom: none;
 }
 
-.content h2{
-    margin-top: 100px;
-    margin-left:-500px;
+.icon a{
     color: #022D66;
-    font-size: 20px;
-    text-shadow: #000000;
-}
-
-.content center img{
-    height: 120px;
-    width: 100px;
-    display: inline-block;
-    margin-top: 50px;
-    margin-left: 50px;
 }
 
 
-.offers h2{
-    margin-top: 50px;
-    margin-left:-630px;
-    color: #022D66;
-    font-size: 20px;
-    text-shadow: #000000;
-}
 
-.offers1{
-    margin-left: 230px;
-}
-
-#pic{
-    padding-left: 0px;
-    height: 220px;
-    width: 170px;
-    display: inline-block;
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-.employees{
-    margin-left: -40px;
-}

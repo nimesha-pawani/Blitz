@@ -15,67 +15,76 @@
 		}
 	}
 
-	// function registerUser($employeeid, $username, $password, $confirm_password){
-	// 	$mysqli = connect();
-	// 	$args = func_get_args();
+	function registerUser($employeeid, $username, $email, $password, $confirm_password){
+		$mysqli = connect();
+		$args = func_get_args();
 		
-	// 	$args = array_map(function($value){
-	// 		return trim($value);
-	// 	}, $args);
+		$args = array_map(function($value){
+			return trim($value);
+		}, $args);
 
-	// 	foreach ($args as $value) {
-	// 		if(empty($value)){
-	// 			return "All fields are required";
-	// 		}
-	// 	}
+		foreach ($args as $value) {
+			if(empty($value)){
+				return "All fields are required";
+			}
+		}
 
-	// 	foreach ($args as $value) {
-	// 		if(preg_match("/([<|>])/", $value)){
-	// 			return "<> characters are not allowed";
-	// 		}
-	// 	}
+		foreach ($args as $value) {
+			if(preg_match("/([<|>])/", $value)){
+				return "<> characters are not allowed";
+			}
+		}
 
-	// 	$stmt = $mysqli->prepare("SELECT employeeid FROM kpi_manager WHERE employeeid = ?");
-	// 	$stmt->bind_param("s", $employeeid);
-	// 	$stmt->execute();
-	// 	$result = $stmt->get_result();
-	// 	$data = $result->fetch_assoc();
-	// 	if($data != NULL){
-	// 		return "Email already exists, please use a different username";
-	// 	}
+		$stmt = $mysqli->prepare("SELECT employeeid FROM kpi_manager WHERE employeeid = ?");
+		$stmt->bind_param("s", $employeeid);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$data = $result->fetch_assoc();
+		if($data != NULL){
+			return "EmployeeId already exists";
+		}
 
-	// 	if(strlen($username) > 100){
-	// 		return "Username is to long";
-	// 	}
+		if(strlen($username) > 100){
+			return "Username is to long";
+		}
 
-	// 	$stmt = $mysqli->prepare("SELECT username FROM kpi_manager WHERE username = ?");
-	// 	$stmt->bind_param("s", $username);
-	// 	$stmt->execute();
-	// 	$result = $stmt->get_result();
-	// 	$data = $result->fetch_assoc();
-	// 	if($data != NULL){
-	// 		return "Username already exists, please use a different username";
-	// 	}
+		$stmt = $mysqli->prepare("SELECT username FROM kpi_manager WHERE username = ?");
+		$stmt->bind_param("s", $username);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$data = $result->fetch_assoc();
+		if($data != NULL){
+			return "Username already exists, please use a different username";
+		}
 
-	// 	if(strlen($password) > 255){
-	// 		return "Password is to long";
-	// 	}
+		$stmt = $mysqli->prepare("SELECT email FROM kpi_manager WHERE email = ?");
+		$stmt->bind_param("s", $email);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		$data = $result->fetch_assoc();
+		if($data != NULL){
+			return "Email already exists, please use a different email";
+		}
 
-	// 	if($password != $confirm_password){
-	// 		return "Passwords don't match";
-	// 	}
+		if(strlen($password) > 255){
+			return "Password is to long";
+		}
 
-	// 	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+		if($password != $confirm_password){
+			return "Passwords don't match";
+		}
 
-	// 	$stmt = $mysqli->prepare("INSERT INTO kpi_manager (username, password, employeeid) VALUES(?,?,?)");
-	// 	$stmt->bind_param("sss", $username, $hashed_password, $employeeid);
-	// 	$stmt->execute();
-	// 	if($stmt->affected_rows != 1){
-	// 		return "An error occurred. Please try again";
-	// 	}else{
-	// 		return "success";			
-	// 	}
-	// }
+		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+		$stmt = $mysqli->prepare("INSERT INTO kpi_manager (username, password, employeeid, email) VALUES(?,?,?,?)");
+		$stmt->bind_param("ssss", $username, $hashed_password, $employeeid, $email);
+		$stmt->execute();
+		if($stmt->affected_rows != 1){
+			return "An error occurred. Please try again";
+		}else{
+			return "success";			
+		}
+	}
 
 	function loginUser($employeeid, $username, $password){
 		$mysqli = connect();

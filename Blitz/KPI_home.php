@@ -13,7 +13,7 @@
 		</div>
 		</label>
 		<ul>
-			<li><a class="active" href="home.php"></i>Home</a></li>    
+			<li><a class="active" href="KPI_home.php"></i>Home</a></li>    
 			<li><a href="About.php">About</a></li>    
 			<li><a href="help.php">Help</a></li>    
 			<li><a href=""><i class="fa fa-bell" aria-hidden="true"></i></a></li>    
@@ -35,8 +35,35 @@
 		</div>
 
 		<br>
-		<br> 
-		<a href="#"><span>Logout</span><i class="fa-solid fa-right-from-bracket"></i></a></br>
+		<br>
+		
+	<div class="logout">	
+		<a href="landingpage.php"><button type="submit" id="btn">Logout<i class="fa-solid fa-right-from-bracket"></i></button></a></br>
 	</div>
+	</div>
+	<div class="content">
+	<center>
+		<h2>Loyalty users of the month</h2>
+		<div class="employees">
+		<a href="#"><img src="Ellipse 13.png"></a>
+		<a href="#"><img src="Ellipse 14.png"></a>
+		<a href="#"><img src="Ellipse 15.png"></a>
+		<a href="#"><img src="Ellipse 16.png"></a>
+		<a href="#"><img src="Ellipse 17.png"></a>
+		</div>
+	</center>
+</div>
+<div class="offers">
+	<center>
+		<h2>Daily offers</h2>
+		<div class="offers1">
+		<a href="#"><img src="Group 16.png" id="pic"></a>
+		<a href="#"><img src="Group 16.png" id="pic"></a>
+		<a href="#"><img src="Group 16.png" id="pic"></a>
+		<a href="#"><img src="Group 16.png" id="pic"></a>
+		<a href="#"><img src="Group 16.png" id="pic"></a>
+		</div>
+	</center>
+</div>
 </body>
 	

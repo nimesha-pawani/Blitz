@@ -1,14 +1,9 @@
-<?php
-require "functions.php";
-$mysqli = connect();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleforkpieach.css">
+	<link rel="stylesheet" href="styleforkpieach.css">
     <script src="https://kit.fontawesome.com/21e5980a06.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,34 +25,19 @@ $mysqli = connect();
 	<div class= "button">
 				<a href="#">Calculate</a>
 	</div>
-    <table id=kpitable>
-
-    <?php
-    $id = $_GET['id']; 
-    $qry = "select * from kpi where id= $id";
-    if(mysqli_query($mysqli,$qry)){
-        $row = mysqli_fetch_assoc(mysqli_query($mysqli,$qry));
-        $name= $row['name'];
-		$variable_1 = $row['variable_1'];
-		$variable_2 = $row['variable_2'];
-		$formula = $row['formula'];
-        echo '
-        <h2>'.$name.'</h2>
-        <div class= "button1">
-        <label>'.$name.' = '.$formula.'</label></div>
-        <tr>
+	<h2>QUOTE RATE</h2>
+	<div class= "button1">
+				<label>Quote Rate = Provided quotes / No.of leads contacted</label>
+	</div>
+	<table id=kpitable>
+	<tr>
         <th>Employee ID</th>
         <th>Employee Name</th>
-        <th>'.$variable_1.'</th>
-        <th>'.$variable_2.'</th>
-        <th>'.$formula.'</th>
-    </tr>';
-    }
-    else{
-        echo mysqli_error($mysqli);
-    }
-?>
-    <tr>
+		<th>Provided quotes</th>
+		<th>No.of leads contacted</th>
+		<th>Provided quotes / No.of leads contacted</th>
+	</tr>
+	<tr>
         <td>EM001</td>
         <td>H.K.M.P. Nimesha </td>
         <td><input type="text" name="vlaues"></td>
@@ -87,6 +67,8 @@ $mysqli = connect();
         <td><input type="text" name="vlaues"></td>
         <td><input type="text" name="vlaues"></td>
         <td></td>
-    </tr>
+    </tr>	
 
-</table>
+	</table>
+
+	

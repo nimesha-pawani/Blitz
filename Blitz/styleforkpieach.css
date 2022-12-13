@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto";
+ }
+
+ 
+ .fa-bell,
+ .fa-user-tie{
+     color: rgb(255, 255, 255);
+     position: relative;
+ }
+
+ .fa-file-invoice,
+ .fa-file-circle-plus,
+ .fa-right-from-bracket{
+     margin-left: 15px;
+     color: rgb(255, 255, 255);
+     position: relative;
+ }
+
+.logo img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+a.active{
+    border-bottom: 3px solid #F8C000;
+    transition: 0.5s;
+    background: #f8be0037;
+}
+
+span{
+    margin-left: 20px;
+    font-family: "Roboto";
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav{  
+   background: #022D66;
+   width: 100%;
+   float: right;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}   
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    padding: 0 15px;
+}
+
+nav ul li a{
+    color: #ffffff;
+    font-size: 20px;
+    padding: 6px 15px;
+}
+
+nav a:hover{
+    border-bottom: 3px solid #F8C000;
+    transition: 0.5s;
+}
+
+h2{
+    color: #022D66;
+    margin-left: 50px;
+    padding: -100px 0px;
+}
+
+.button a{
+    color: #022D66;
+    border: 0;
+    background: #f8be00af;
+    display:inline-block;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 1300px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    align-self: center;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.button a:hover{
+    background-color:#F8C000;
+}
+
+.button1 label{
+    color: #022D66;
+    border: 0;
+    background: #4141405d;
+    display:inline-block;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 100px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    align-self: center;
+    border-radius: 20px;
+}
+
+#kpitable{
+    margin-top: 30px;
+    margin-left: 50px;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#kpitable td, #kpitable th {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#kpitable tr:nth-child(even){background-color: #efeeee;}
+
+#kpitable tr:hover {background-color: #ddd;}
+
+#kpitable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #022D66;
+  color: white;
+}

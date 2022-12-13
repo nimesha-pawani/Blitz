@@ -10,12 +10,20 @@
 body{
     font-family:"Roboto";}
 
+.header img {
+        float:left;
+        width: 150px;
+        height: 150px;
+        margin-top: -10px;
+}    
+
 .box {
     border-radius: 20px;
     width: 400px;
     height: 550px;
     padding: 40px;
     position: center;
+    margin-right: 100px;
     border: none;
     background-color:#ffaf40e2;
     box-shadow: 2px 2px 4px #071D70;

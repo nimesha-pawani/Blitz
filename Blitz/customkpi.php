@@ -27,6 +27,9 @@
 	<title>Custom KPI</title>
 </head>
 <body>
+	<div class="header">
+        <img src="blitzi.png" alt="logo" />
+    </div>
     <div class="main">
 		<form action="" class="box" method="post" autocomplete="off">	
 		<h1><i class="fa-regular fa-square-plus"></i> Custom KPI</h1>
