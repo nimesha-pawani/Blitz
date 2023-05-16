@@ -1,2 +1,1 @@
 # Blitzadd offers
-nime - njfjnbnfdjk
